@@ -1,44 +1,27 @@
-# AlgoNext Hard Test 1
+# AP Politics Survey Project
 
-This repository contains Python solutions for various algorithm and data structure exercises.
+This repository contains a Python survey program for state-level and national-level political preferences in India.
 
 ## Contents
 
-### 1. Character Frequency Counter (`algonex`)
-A function that counts the frequency of each character in a string and returns a dictionary with character counts.
-```python
-algonex("ALGONEX")  # Returns character frequency dictionary
-```
-
-### 2. Duplicate Finder (`duplicatefinder`)
-Finds and returns a list of duplicate elements from an input list.
-```python
-duplicatefinder([101,101,102,102,103,103,104])  # Returns [101, 102, 103]
-```
-
-### 3. Employee Salary Analysis
-Finds the highest and lowest paid employees using `max()` and `min()` functions on tuples.
-
-### 4. Even Number Squares
-Generates a list of squares for all even numbers from 1 to 1000 using list comprehension.
-
-### 5. Student Grade Sorting
-Sorts students by their grades in descending order using lambda functions and sorted().
-
-### 6. Bank Report (In Progress)
-A function to calculate total credits, debits, and final balance from a transaction list.
-
-### 7. Map and Filter (In Progress)
-Demonstrates usage of `map()` and `filter()` functions for data transformation.
+### 1. Political Survey (`python_mini_project.py`)
+A program that collects voter details and preferences for:
+- state chief minister candidates and party preferences
+- national prime minister candidates and party preferences
+- leader qualities for both state and national candidates
+- EVM manipulation opinions for state and national elections
 
 ## Files
-- `algonex_text1.py` - Main Python file with all exercise solutions
+- `python_mini_project.py` - Main survey program
+- `README.md` - Project documentation
 
 ## Getting Started
-To run the file:
+To run the survey program:
 ```bash
-python algonex_text1.py
+python python_mini_project.py
 ```
 
 ## Notes
-Some functions are commented out and in progress. Uncomment relevant sections to execute specific exercises.
+- The script currently supports sample states: Andhra Pradesh, Tamil Nadu, Karnataka, and Telangana.
+- It stores responses for each voter, including separate opinions on state and national EVM manipulation.
+- Add more states or enhance validation as needed.
