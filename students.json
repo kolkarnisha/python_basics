@@ -1,0 +1,42 @@
+{
+  "ALG001": {
+    "name": "Nisha Zareentaj",
+    "email": "neeshakolkar@gmail.com",
+    "total_fee": 25000,
+    "fee_paid": 5000,
+    "training_start": "2026-08-01",
+    "training_days": 60
+  },
+  "ALG002": {
+    "name": "KARTHIK PASALA",
+    "email": "karthik@example.com",
+    "total_fee": 15000,
+    "fee_paid": 10000,
+    "training_start": "2026-08-05",
+    "training_days": 60
+  },
+  "ALG003": {
+    "name": "KEERTHI REDDY",
+    "email": "keerthi@example.com",
+    "total_fee": 15000,
+    "fee_paid": 5000,
+    "training_start": "2026-08-10",
+    "training_days": 60
+  },
+  "ALG004": {
+    "name": "RAGIRI INDHU",
+    "email": "ragiri@example.com",
+    "total_fee": 15000,
+    "fee_paid": 0,
+    "training_start": "2026-08-15",
+    "training_days": 60
+  },
+  "ALG005": {
+    "name": "SOWMYA REDDY",
+    "email": "sowmya@example.com",
+    "total_fee": 15000,
+    "fee_paid": 15000,
+    "training_start": "2026-08-20",
+    "training_days": 60
+  }
+}

@@ -1,4 +1,5 @@
 from datetime import datetime, date
+import json
 import os
 import smtplib
 import ssl
@@ -11,8 +12,9 @@ EMAIL_PASSWORD = os.getenv("EMAIL_PASSWORD", "")
 SMTP_SERVER = os.getenv("SMTP_SERVER", "smtp.gmail.com")
 SMTP_PORT = int(os.getenv("SMTP_PORT", "465"))
 EMAIL_SENDING_ENABLED = os.getenv("EMAIL_SENDING_ENABLED", "false").lower() in {"1", "true", "yes"}
+STUDENT_DATA_FILE = os.getenv("STUDENT_DATA_FILE", "students.json")
 
-STUDENTS_DB = {
+DEFAULT_STUDENTS_DB = {
     "ALG001": {
         "name": "Nisha Zareentaj",
         "email": "neeshakolkar@gmail.com",
@@ -54,6 +56,27 @@ STUDENTS_DB = {
         "training_days": 60,
     },
 }
+
+def load_student_data(filename=STUDENT_DATA_FILE):
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    data_path = filename if os.path.isabs(filename) else os.path.join(script_dir, filename)
+    if not os.path.isfile(data_path):
+        return DEFAULT_STUDENTS_DB.copy()
+
+    try:
+        with open(data_path, encoding="utf-8") as handle:
+            data = json.load(handle)
+        if isinstance(data, dict):
+            print(f"Loaded student records from {data_path}")
+            return data
+        print(f"Warning: {filename} does not contain a JSON object. Using built-in student records.")
+    except Exception as error:
+        print(f"Warning: Could not load {filename}: {error}. Using built-in student records.")
+
+    return DEFAULT_STUDENTS_DB.copy()
+
+
+STUDENTS_DB = load_student_data()
 
 
 def format_currency(amount):
